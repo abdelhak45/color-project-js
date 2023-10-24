@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <title>ACHTOUI-WEB</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/* =============================== */
+#span {
+    background-color: black;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.me-2{
+    width: 100%;
+    font-size: 20px;
+    margin-top: -16px;
+}
+/* =============================== */
+#parent {
+
+    padding: 20px 10px ;
+    max-width: 1000px;
+    margin: 0px auto;
+}
+
+.row{
+    margin: 80px 0px;
+}
+#titele{
+    color: black;
+}
+.h{
+    font-weight: bold;
+
+}
+.p{
+    color: black;
+    font-size: x-large;
+    font-weight: 200;
+    word-spacing: 5px;
+    line-height: 50px;
+    max-width: 900px;
+
+}
+.p::first-letter{
+    font-size: 50px;
+    color: red;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+/* ====================================== */
+.btne{
+    margin-left: 5px;
+    width: fit-content;
+    background-color: rgb(33, 199, 135);
+    color: rgb(36, 25, 194);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 2pxpx;
+}
+#log{
+    width: 80% !important;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin: 50px auto; 
+    overflow-x: hidden;
+}
+#code{
+    display: none;
+}
+#up {
+    color: rgb(248, 247, 247);
+    background-color: rgb(34, 100, 185);
+    outline: none;
+    border: 2px solid rgb(46, 160, 122);
+    font-size: 34px;
+    padding: 0px 10px;
+    width: 100px;
+    height: 50px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 50%;
+    display: none;
+}
+</style>
+<body>
+    
+<div id="bigParent">
+    <p id="span">
+        <b>Background-color: <span class="ms-2"  style="color: green;" id="p"></span>;<span class="btne" id="btn">Change</span></b><br>
+        <b>Title-color: <span class="ms-2"  style="color: green;" id="p2"></span>;<span class="btne" id="btn2">Change</span></b><br>
+        <b>Paragraph-color: <span class="ms-2"  style="color: green;" id="p3"></span>;<span class="btne" id="btn3">Change</span></b>
+    </p>
+    
+    
+    
+    <div id="parent">
+        <div class="row">
+            <div id="titele">
+                <h1 class="h">Hi, I'm </h1>
+                <h1 class="h">ABDELHAK ACHTOUI</h1>
+            </div>
+            <p class="p" id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cum necessitatibus assumenda temporibus repellendus! Vitae labore alias iure quis similique! In, necessitatibus? Temporibus aut nesciunt inventore quia enim ipsum eveniet.</p>
+        </div>
+
+    </div>
+    <button class="btn btn-dark p-3" style="width: 100%;" id="btn4">Show Code</button>
+</div>
+
+
+
+    <div id="code">
+
+        <br>
+        <br>
+        <br>
+        <center><h3 style="font-weight: bold;border-top: 1px solid#333; border-bottom: 1px solid#333;padding-bottom: 5px;color: #135ecf;user-select: none;">HTML CODE</h3></center>
+        <pre id="pre"></pre>
+        <br>
+        <center><h3 style="font-weight: bold;border-top: 1px solid#333; border-bottom: 1px solid#333;padding-bottom: 5px;color: #135ecf;user-select: none;">CSS CODE</h3></center>
+        <br>
+        <br>
+        <pre class="css">
+body{
+    background-color: #<span id="cssBody"></span>;
+}
+#paren{
+    padding: 50px 10px ;
+    max-width: 1000px;
+    margin: 0px auto;
+}
+.row{
+    margin: 80px 0px;
+}
+#titele{
+    color: #<span id="cssTitele"></span>;
+}
+.h{
+    font-weight: bold;
+}
+.p{
+    color: #<span id="cssp"></span>;
+    font-size: x-large;
+    font-weight: 200;
+    word-spacing: 5px;
+    line-height: 50px;
+    max-width: 900px;
+}
+.p::first-letter{
+    font-size: 50px;
+    color: red;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+        </pre>
+
+    </div>
+
+    <div class="btnUp">
+        <button id="up">^</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
